@@ -121,7 +121,9 @@ public class TreeProblems {
         if(!sumMapCount.contains(val)) sumMapCount.add(val);
       }
     }
-    return sumMapCount;
+    int counting = 0;
+    for(Integer key : sumMapCount) counting += key;
+    return counting;
   }
 
   /*
