@@ -82,13 +82,11 @@ public class TreeProblems {
    then the method should return 32.
    A null tree should return 0
   */
-  static int count = 0;
   public static int sumTree(Node<Integer> root) {
     if(root == null) return 0;
-    count += root.value;
+    int count = root.value;
     for(Node value : root.children){
       count += sumTree(value);
-      return count;
     }
     return count;
   }
