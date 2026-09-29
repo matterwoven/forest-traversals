@@ -208,14 +208,14 @@ public class TreeProblems {
   public static int maxDepth(Map<String, List<String>> tree) {
     if(tree == null) return 0;
     String root = findRoot(tree);
-    checkRecursive(tree, root, 0);
+    return checkRecursive(tree, root, 0);
   }
   public static int checkRecursive(Map<String, List<String>> tree, String c, int depth){
     for(String key : tree.keySet()){
       if(tree.containsKey(key)){
         return checkRecursive(tree, c, depth + 1);
-      }  
+      }
     }
-    return 0;
+    return depth;
   }
 }
